@@ -1,0 +1,35 @@
+CREATE DATABASE perpustakaan;
+
+-- Tabel untuk menyimpan data pustakawan
+CREATE TABLE pustakawan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Tabel untuk menyimpan data anggota
+CREATE TABLE anggota (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Tabel untuk menyimpan data buku
+CREATE TABLE buku (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(255) NOT NULL,
+    penulis VARCHAR(255) NOT NULL,
+    nomor_buku VARCHAR(50) NOT NULL
+);
+
+-- Tabel untuk menyimpan data peminjaman buku
+CREATE TABLE peminjaman (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_anggota INT,
+    id_buku INT,
+    tanggal_pinjam DATE,
+    tanggal_kembali DATE,
+    FOREIGN KEY (id_anggota) REFERENCES anggota(id),
+    FOREIGN KEY (id_buku) REFERENCES buku(id)
+);
