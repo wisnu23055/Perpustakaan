@@ -2,6 +2,6 @@
 
 Digital library using PHP
 
-##Link Website
--https://perpustakaan-10.great-site.net/
-
+## Acces Web
+You can see the library from this domain:
+- https://perpustakaan-10.great-site.net/
