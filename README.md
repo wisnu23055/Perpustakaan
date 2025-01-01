@@ -1,6 +1,6 @@
 # Perpustakaan
 
-Digital library using PHP
+Simple Digital library using PHP
 
 ## Acces Web
 You can see the library from this domain:
